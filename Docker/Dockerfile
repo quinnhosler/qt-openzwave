@@ -35,7 +35,7 @@ RUN git clone https://github.com/qt/qtmqtt.git \
 	&& /usr/lib/qt5/bin/qmake QT_BUILD_PARTS="libs tools" \
 	&& make \
 	&& make install
-RUN git clone https://github.com/OpenZWave/open-zwave.git \
+RUN git clone --single-branch --branch august-doorsense-support https://github.com/quinnhosler/open-zwave.git \
 	&& cd open-zwave \
 	&& make -j4 \
 	&& make install
